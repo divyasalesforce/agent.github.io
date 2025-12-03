@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dummy Google Search</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+background: #ffffff;
+}
+
+.logo {
+font-size: 64px;
+font-weight: bold;
+font-family: Arial, sans-serif;
+color: #4285F4;
+}
+.logo span:nth-child(2) { color: #DB4437; }
+.logo span:nth-child(3) { color: #F4B400; }
+.logo span:nth-child(4) { color: #4285F4; }
+.logo span:nth-child(5) { color: #0F9D58; }
+.logo span:nth-child(6) { color: #DB4437; }
+
+.search-box {
+margin-top: 20px;
+width: 500px;
+max-width: 90%;
+display: flex;
+border: 1px solid #c6c6c6;
+border-radius: 24px;
+padding: 10px 15px;
+}
+
+.search-box input {
+flex: 1;
+border: none;
+font-size: 16px;
+outline: none;
+}
+
+.buttons {
+margin-top: 25px;
+}
+
+.buttons button {
+font-size: 14px;
+padding: 10px 18px;
+margin: 5px;
+border: 1px solid #f8f9fa;
+border-radius: 4px;
+background: #f8f9fa;
+cursor: pointer;
+}
+
+.buttons button:hover {
+border: 1px solid #c6c6c6;
+}
+</style>
+</head>
+<body>
+
+<div class="logo">
+<span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+</div>
+
+<form class="search-box" action="#" onsubmit="dummySearch(event)">
+<input type="text" id="query" placeholder="Search Google or type a URL">
+</form>
+
+<div class="buttons">
+<button onclick="dummySearch()">Google Search</button>
+<button onclick="alert('Feeling Lucky! (Dummy)')">I'm Feeling Lucky</button>
+</div>
+
+<script>
+function dummySearch(event) {
+if (event) event.preventDefault();
+const q = document.getElementById('query').value;
+alert("You searched for: " + q + "\n(This is a dummy search engine)");
+}
+</script>
+
+</body>
+</html>
